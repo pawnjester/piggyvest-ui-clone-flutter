@@ -43,18 +43,31 @@ class HomePageState extends State<HomePage> {
                   height: 50,
                 ),
                 Container(
-                  height: 200,
-                  child: PageView(
-                    controller: PageController(viewportFraction: 0.8),
+                  height: 120,
+                  child: ListView(
                     scrollDirection: Axis.horizontal,
-                    pageSnapping: true,
                     children: <Widget>[
                       Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 8),
-                        width: 200,
-                        height: 10,
+                        width: 350,
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Row(
+                            children: <Widget>[
+                              Icon(Feather.shield, color: Colors.white,),
+                              SizedBox(width: 10,),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text("Total Savings", style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),),
+                                  Text("N0.00", style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),)
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
                         decoration: BoxDecoration(
-                            color: Colors.redAccent,
+                            color: Colors.blue[800],
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(10),
                                 topRight: Radius.circular(10),
@@ -62,10 +75,26 @@ class HomePageState extends State<HomePage> {
                       ),
                       Container(
                         margin: const EdgeInsets.symmetric(horizontal: 8),
-                        width: 200,
-                        height: 100,
+                        width: 350,
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Row(
+                            children: <Widget>[
+                              Icon(Feather.shield, color: Colors.white,),
+                              SizedBox(width: 10,),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text("Total Investments", style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),),
+                                  Text("N58,500.00", style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),)
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
                         decoration: BoxDecoration(
-                            color: Colors.blueAccent,
+                            color: Colors.purple[800],
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(10),
                                 topRight: Radius.circular(10),
@@ -73,10 +102,54 @@ class HomePageState extends State<HomePage> {
                       ),
                       Container(
                         margin: const EdgeInsets.symmetric(horizontal: 8),
-                        width: 200,
-                        height: 100,
+                        width: 350,
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Row(
+                            children: <Widget>[
+                              Icon(Feather.dollar_sign, color: Colors.white,),
+                              SizedBox(width: 10,),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text("Flex Dollar", style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),),
+                                  Text("\$${0.00}", style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),)
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
                         decoration: BoxDecoration(
-                            color: Colors.greenAccent,
+                            color: Colors.black,
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                topRight: Radius.circular(10),
+                                bottomRight: Radius.circular(10))),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 8),
+                        width: 350,
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Row(
+                            children: <Widget>[
+                              Icon(MaterialIcons.local_movies, color: Colors.pinkAccent,),
+                              SizedBox(width: 10,),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text("Flex Naira", style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),),
+                                  Text("\$${0.00}", style: TextStyle(color: Colors.pinkAccent, fontSize: 25, fontWeight: FontWeight.bold),)
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(color: Colors.black12),
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(10),
                                 topRight: Radius.circular(10),
@@ -121,10 +194,13 @@ class HomePageState extends State<HomePage> {
                   children: <Widget>[
                     Container(
                       height: 50,
+                      padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Row(
                         children: <Widget>[
+                          Icon(Feather.circle, color: Colors.blue[700],),
+                          SizedBox(width: 10),
                           Text("Tell us more about yourself",
-                              style: TextStyle(fontWeight: FontWeight.bold))
+                              style: TextStyle(fontWeight: FontWeight.bold)),
                         ],
                       ),
                       decoration: BoxDecoration(
@@ -139,14 +215,16 @@ class HomePageState extends State<HomePage> {
                     ),
                     Container(
                         height: 50,
+                        padding: EdgeInsets.symmetric(horizontal: 10),
                         child: Row(
                           children: <Widget>[
+                            Icon(Feather.circle, color: Colors.blue[700],),
+                            SizedBox(width: 10),
                             Text("Turn on your PiggyBank AutoSave",
                                 style: TextStyle(fontWeight: FontWeight.bold)),
                             SizedBox(
                               width: 5,
                             ),
-                            Icon(FontAwesomeIcons.trafficLight)
                           ],
                         ),
                         decoration: BoxDecoration(
@@ -160,8 +238,11 @@ class HomePageState extends State<HomePage> {
                     ),
                     Container(
                         height: 50,
+                        padding: EdgeInsets.symmetric(horizontal: 10),
                         child: Row(
                           children: <Widget>[
+                            Icon(Feather.circle, color: Colors.blue[700],),
+                            SizedBox(width: 10),
                             Text(
                               "Safelock 50000 for 61 - 90 days",
                               style: TextStyle(fontWeight: FontWeight.bold),
