@@ -16,30 +16,38 @@ class BottomNavigationItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        child: Column(
-          children: <Widget>[
-            Icon(
-              icon,
-              color: index == currentIndex ? Colors.blueAccent : Colors.grey,
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Text(
-              text,
-              style: TextStyle(color: Colors.black),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Container(
-              height: 8,
-              width: 8,
-              decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  shape: BoxShape.circle),
-            )
-          ],
+        height: 80,
+        child:
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+          child: Column(
+            children: <Widget>[
+              Icon(
+                icon,
+                color: index == currentIndex ? Colors.blueAccent : Colors.grey,
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Text(
+                text,
+                style: TextStyle(color: Colors.black, fontSize: 12),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              index == currentIndex ? Container(
+                height: 8,
+                width: 8,
+                decoration: BoxDecoration(
+                    color: index == currentIndex ? Colors.blueAccent : Colors.grey,
+                    shape: BoxShape.circle),
+              ): Container(
+                height: 8,
+                width: 8,
+              )
+            ],
+          ),
         ),
       ),
     );

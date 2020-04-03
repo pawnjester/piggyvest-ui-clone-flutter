@@ -18,12 +18,12 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
   @override
   Widget build(BuildContext context) {
     int _itemIndex = widget.index == null ? 0 : widget.index;
-    return Stack(alignment: Alignment.center, children: [
+    return Stack(
+        alignment: Alignment.center,
+        children: [
       Container(
         height: 80,
-        decoration: BoxDecoration(
-          color: Colors.white
-        ),
+        decoration: BoxDecoration(color: Colors.white),
       ),
       Padding(
         padding: EdgeInsets.only(left: 20, right: 20),
@@ -53,7 +53,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
               },
             ),
             BottomNavigationItem(
-              icon: Icons.airplanemode_active,
+              icon: FontAwesome.rocket,
               index: 2,
               text: 'Invest',
               currentIndex: _itemIndex,
@@ -63,8 +63,8 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
               },
             ),
             BottomNavigationItem(
-              icon: Icons.account_circle,
-              index: 2,
+              icon: MaterialCommunityIcons.account,
+              index: 3,
               text: 'Account',
               currentIndex: _itemIndex,
               onTap: () {

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:piggyvestclone/widgets/custom_navigation_bar.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -29,14 +30,11 @@ class HomePageState extends State<HomePage> {
               children: <Widget>[
                 Row(
                   children: <Widget>[
-                    Text(
-                      "Okonji,",
-                      style:
+                        Text(
+                          "Okonji,",
+                          style:
                           TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
-                    ),
-                    Column(
-                      children: <Widget>[Text("Good morning"), Text('🌞')],
-                    )
+                        ),
                   ],
                 ),
                 SizedBox(
@@ -383,14 +381,14 @@ class HomePageState extends State<HomePage> {
           ),
         ]),
       ),
-//      bottomNavigationBar: CustomNavigationBar(
-//        index: _currentIndex,
-//        onTap: (index) {
-//          setState(() {
-//            _currentIndex = index;
-//          });
-//        },
-//      ),
+      bottomNavigationBar: CustomNavigationBar(
+        index: _currentIndex,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+      ),
     );
   }
 }
