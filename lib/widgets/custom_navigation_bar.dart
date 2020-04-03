@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:piggyvestclone/pages/savings_page.dart';
 import 'package:piggyvestclone/widgets/bottom_navigation_item.dart';
 //import 'flutter_ic';
 
@@ -48,6 +49,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
               text: 'Savings',
               currentIndex: _itemIndex,
               onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => SavingsPage()));
                 _itemIndex = 1;
                 widget.onTap(_itemIndex);
               },
