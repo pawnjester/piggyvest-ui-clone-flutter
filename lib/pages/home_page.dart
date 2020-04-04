@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:piggyvestclone/pages/savings_page.dart';
 import 'package:piggyvestclone/widgets/custom_navigation_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -30,15 +31,24 @@ class HomePageState extends State<HomePage> {
               children: <Widget>[
                 Row(
                   children: <Widget>[
+                    Column(
+                      children: <Widget>[
                         Text(
                           "Okonji,",
                           style:
                           TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
                         ),
+                        Text(
+                          "Good morning,",
+                          style:
+                          TextStyle(fontSize: 14),
+                        ),
+                      ],
+                    )
                   ],
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 20,
                 ),
                 Container(
                   height: 120,
@@ -51,14 +61,31 @@ class HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.all(16.0),
                           child: Row(
                             children: <Widget>[
-                              Icon(Feather.shield, color: Colors.white,),
-                              SizedBox(width: 10,),
+                              Icon(
+                                Feather.shield,
+                                color: Colors.white,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Text("Total Savings", style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),),
-                                  Text("N0.00", style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),)
+                                  Text(
+                                    "Total Savings",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text(
+                                    "N0.00",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold),
+                                  )
                                 ],
                               )
                             ],
@@ -78,14 +105,31 @@ class HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.all(16.0),
                           child: Row(
                             children: <Widget>[
-                              Icon(Feather.shield, color: Colors.white,),
-                              SizedBox(width: 10,),
+                              Icon(
+                                Feather.shield,
+                                color: Colors.white,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Text("Total Investments", style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),),
-                                  Text("N58,500.00", style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),)
+                                  Text(
+                                    "Total Investments",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text(
+                                    "N58,500.00",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold),
+                                  )
                                 ],
                               )
                             ],
@@ -105,14 +149,31 @@ class HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.all(16.0),
                           child: Row(
                             children: <Widget>[
-                              Icon(Feather.dollar_sign, color: Colors.white,),
-                              SizedBox(width: 10,),
+                              Icon(
+                                Feather.dollar_sign,
+                                color: Colors.white,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Text("Flex Dollar", style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),),
-                                  Text("\$${0.00}", style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),)
+                                  Text(
+                                    "Flex Dollar",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text(
+                                    "\$${0.00}",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold),
+                                  )
                                 ],
                               )
                             ],
@@ -132,14 +193,31 @@ class HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.all(16.0),
                           child: Row(
                             children: <Widget>[
-                              Icon(MaterialIcons.local_movies, color: Colors.pinkAccent,),
-                              SizedBox(width: 10,),
+                              Icon(
+                                MaterialIcons.local_movies,
+                                color: Colors.pinkAccent,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Text("Flex Naira", style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),),
-                                  Text("\$${0.00}", style: TextStyle(color: Colors.pinkAccent, fontSize: 25, fontWeight: FontWeight.bold),)
+                                  Text(
+                                    "Flex Naira",
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text(
+                                    "\$${0.00}",
+                                    style: TextStyle(
+                                        color: Colors.pinkAccent,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold),
+                                  )
                                 ],
                               )
                             ],
@@ -161,7 +239,7 @@ class HomePageState extends State<HomePage> {
                 ),
                 Text(
                   "INVESTMENT OPPORTUNITY",
-                  style: TextStyle(fontWeight: FontWeight.w600),
+                  style: TextStyle(fontWeight: FontWeight.w600,fontSize: 13),
                 ),
                 SizedBox(
                   height: 15,
@@ -177,11 +255,16 @@ class HomePageState extends State<HomePage> {
                 ),
                 Row(
                   children: <Widget>[
-                    Text("TO-DO LIST"),
+                    Text(
+                      "TO-DO LIST",
+                      style: TextStyle(fontSize: 12),
+                    ),
                     Text(
                       "- REFRESH",
                       style: TextStyle(
-                          color: Colors.blue, fontWeight: FontWeight.w500),
+                          color: Colors.blue[900],
+                          fontWeight: FontWeight.w500,
+                          fontSize: 12),
                     )
                   ],
                 ),
@@ -195,7 +278,10 @@ class HomePageState extends State<HomePage> {
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Row(
                         children: <Widget>[
-                          Icon(Feather.circle, color: Colors.blue[700],),
+                          Icon(
+                            Feather.circle,
+                            color: Colors.blue[700],
+                          ),
                           SizedBox(width: 10),
                           Text("Tell us more about yourself",
                               style: TextStyle(fontWeight: FontWeight.bold)),
@@ -216,7 +302,10 @@ class HomePageState extends State<HomePage> {
                         padding: EdgeInsets.symmetric(horizontal: 10),
                         child: Row(
                           children: <Widget>[
-                            Icon(Feather.circle, color: Colors.blue[700],),
+                            Icon(
+                              Feather.circle,
+                              color: Colors.blue[700],
+                            ),
                             SizedBox(width: 10),
                             Text("Turn on your PiggyBank AutoSave",
                                 style: TextStyle(fontWeight: FontWeight.bold)),
@@ -239,7 +328,10 @@ class HomePageState extends State<HomePage> {
                         padding: EdgeInsets.symmetric(horizontal: 10),
                         child: Row(
                           children: <Widget>[
-                            Icon(Feather.circle, color: Colors.blue[700],),
+                            Icon(
+                              Feather.circle,
+                              color: Colors.blue[700],
+                            ),
                             SizedBox(width: 10),
                             Text(
                               "Safelock 50000 for 61 - 90 days",

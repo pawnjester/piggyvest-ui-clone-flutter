@@ -69,7 +69,7 @@ class SavingsPageState extends State<SavingsPage> {
                           savingsType: "Piggybank",
                           color: Colors.blue[700],
                           backgroundColor: Colors.blue[100],
-                          moneyText: "N0.00",
+                          moneyText: "N100.00",
                           icon: Feather.shield,
                         ),
                         SavingsCard(
