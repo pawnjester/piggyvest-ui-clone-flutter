@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:piggyvestclone/pages/account_page.dart';
 import 'package:piggyvestclone/pages/savings_page.dart';
 import 'package:piggyvestclone/widgets/bottom_navigation_item.dart';
 //import 'flutter_ic';
@@ -70,6 +71,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
               text: 'Account',
               currentIndex: _itemIndex,
               onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => AccountPage()));
                 _itemIndex = 3;
                 widget.onTap(_itemIndex);
               },

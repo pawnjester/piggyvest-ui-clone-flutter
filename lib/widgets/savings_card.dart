@@ -17,7 +17,7 @@ class SavingsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      margin: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
         height: 200,
         child: Padding(
           padding: const EdgeInsets.all(16.0),

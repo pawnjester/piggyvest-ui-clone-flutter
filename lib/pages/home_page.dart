@@ -32,6 +32,7 @@ class HomePageState extends State<HomePage> {
                 Row(
                   children: <Widget>[
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
                           "Okonji,",
